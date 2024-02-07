@@ -1,0 +1,450 @@
+
+.interactCape{
+    width: 55%;
+    height: 100%;
+    background-image: url(../img/capa.png);
+    background-size: cover;
+    background-position: center;
+    position: absolute;
+    right: 0;
+}
+
+.interactCape:hover{
+    background-image: url(../img/capa.gif);
+}
+
+.jogar{
+    width: 150px;
+    color: white;
+    font-family: 'Metal Mania';
+    font-size: 30px;
+    margin-left: 50px;
+    margin-top: 20px;
+    cursor: pointer;
+    font-weight: 500;
+}
+
+#noche{
+    color: white;
+    margin-left: 50px;
+    margin-bottom: 20px;
+    font-weight: 500;
+}
+
+.menuInicial p{
+    color: white;
+    font-weight: 500;
+    position: absolute;
+    bottom: 8px;
+    left: 8px;
+}
+
+.music{
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    position: absolute;
+    bottom: 5px;
+    left: 5px;
+    background-color: red;
+    color: white;
+    font-family: 'Metal Mania';
+    font-size: 25px;
+    cursor: pointer;
+}
+
+.titulo{
+    position: absolute;
+    top: 0;
+}
+
+h1{
+    color: white;
+    font-size: 50px;
+    margin: 50px;
+    font-weight: 500;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.ferro{
+    display: block;
+    background-color: gray;
+    width: 100%;
+    height: 0%;
+    transition: 1s;
+    position: absolute;
+    top: 0;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+.hud{
+    display: block;
+    transform-style: preserve-3d;
+    width: 100%;
+    height: 100%;
+    transform: scale3d(0.4, 0.4, .04) rotateX(0deg) rotateY(0deg) rotateZ(0deg)
+    translate3d(0px, 0px, 14500px) skew(0deg, 0deg);
+    pointer-events: none;
+}
+
+#opCamera{
+    display: none;
+}
+
+#opCamera:checked ~ .camera{
+    transform: scale3d(0.4, 0.4, .04) rotateX(0deg) rotateY(0deg) rotateZ(0deg)
+    translate3d(0px, 0px, 14500px) skew(0deg, 0deg);
+}
+
+.camera{
+    display: block;
+    transform-style: preserve-3d;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    transform: scale3d(0.4, 0.4, .04) rotateX(0deg) rotateY(0deg) rotateZ(0deg)
+    translate3d(0px, 700px, 14500px) skew(0deg, 0deg);
+    background-color: black;
+    transition: 0.7s;
+}
+
+
+
+.mapa{
+    position: absolute;
+    bottom: 10px;
+    right: -50px;
+    z-index: 20;
+    pointer-events: none;
+}
+
+.freddy, .chica, .bonnie, .fox, .golden{
+    margin-bottom: 10px;
+    display: none;
+    
+}
+
+.can1{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: rgba(121, 121, 121, 0.445);
+    width: 140px;
+    height: 140px;
+    position: absolute;
+    right: 130px;
+    top: 195px;
+    z-index: 21;
+    cursor: pointer;
+}.can1:hover{
+    background-color: rgba(192, 192, 192, 0.445);
+}
+
+.sala1{
+    display: none;
+    width: 100%;
+    height: 100%;
+    background-image: url(../img/Salão.png);
+    z-index: 20;
+}
+
+.sala1 .freddy{
+    display: block;
+    position: absolute;
+    bottom: 90px;
+    transform: scale(1);
+}
+
+.sala1 .chica{
+    display: block;
+    position: absolute;
+    bottom: 90px;
+    left: 200px;
+    transform: scale(1);
+}
+
+.sala1 .bonnie{
+    display: block;
+    position: absolute;
+    bottom: 90px;
+    left: 400px;
+    transform: scale(1);
+}
+
+.sala1 .fox{
+    display: none;
+    position: absolute;
+    bottom: 90px;
+    left: 600px;
+    transform: scale(1);
+}
+
+.sala5 .fox{
+    display: block;
+}
+
+.sala1 .golden{
+    display: none;
+    position: absolute;
+    bottom: 90px;
+    left: 800px;
+    transform: scale(1);
+}
+
+.can2{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: rgba(121, 121, 121, 0.445);
+    width: 84px;
+    height: 100px;
+    position: absolute;
+    right: 280px;
+    top: 215px;
+    z-index: 21;
+    cursor: pointer;
+}.can2:hover{
+    background-color: rgba(192, 192, 192, 0.445);
+}
+
+.sala2{
+    display: none;
+    width: 100%;
+    height: 100%;
+    background-image: url(../img/Sala2.png);
+    z-index: 20;
+    align-items: end;
+}
+
+
+
+.can3{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: rgba(121, 121, 121, 0.445);
+    width: 84px;
+    height: 100px;
+    position: absolute;
+    right: 35px;
+    top: 215px;
+    z-index: 21;
+    cursor: pointer;
+}.can3:hover{
+    background-color: rgba(192, 192, 192, 0.445);
+}
+
+.sala3{
+    display: none;
+    width: 100%;
+    height: 100%;
+    background-image: url(../img/Sala3.png);
+    z-index: 20;
+    align-items: end;
+}
+
+
+.can4{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: rgba(121, 121, 121, 0.445);
+    width: 110px;
+    height: 75px;
+    position: absolute;
+    right: 145px;
+    bottom: 180px;
+    z-index: 21;
+    cursor: pointer;
+}.can4:hover{
+    background-color: rgba(192, 192, 192, 0.445);
+}
+
+.sala4{
+    display: none;
+    width: 100%;
+    height: 100%;
+    background-image: url(../img/Sala4.png);
+    z-index: 20;
+    align-items: end;
+}
+
+
+.can5{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: rgba(121, 121, 121, 0.445);
+    width: 110px;
+    height: 75px;
+    position: absolute;
+    right: 145px;
+    top: 110px;
+    z-index: 21;
+    cursor: pointer;
+}.can5:hover{
+    background-color: rgba(192, 192, 192, 0.445);
+}
+
+.sala5{
+    display: none;
+    width: 100%;
+    height: 100%;
+    background-image: url(../img/Sala5.png);
+    z-index: 20;
+    align-items: end;
+}
+
+#cam1, #cam2, #cam3, #cam4, #cam5{
+    display: none;
+}
+
+#cam1:checked ~ .sala1{
+    display: block;
+}
+#cam2:checked ~ .sala2{
+    display: flex;
+}
+#cam3:checked ~ .sala3{
+    display: flex;
+}
+#cam4:checked ~ .sala4{
+    display: flex;
+}
+#cam5:checked ~ .sala5{
+    display: flex;
+}
+
+
+.bateria{
+    display: flex;
+    border: 2px solid rgb(153, 153, 153);
+    width: 100px;
+    height: 50px;
+    align-items: center;
+    justify-content: left;
+}
+
+.carga{
+    display: flex;
+    background-color: rgb(235, 135, 135);
+    height: 100%;
+    width: 100%;
+    transition: 0.2s;
+    
+}
+
+.areajunpscare{
+    display: block;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    position: absolute;
+    z-index: 18;
+    background-image: url();
+    background-size: cover;
+    transform: scale3d(0.4, 0.4, .04) rotateX(0deg) rotateY(0deg) rotateZ(0deg)
+    translate3d(0px, 0px, 15022px) skew(0deg, 0deg);
+}
+
+.aviso{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    z-index: 100;
+    background-color: black;
+    transition: 0.5s;
+    transform: scale3d(1, 1, 1) rotateX(0deg) rotateY(0deg) rotateZ(0deg)
+    translate3d(0px, 0px, 506px) skew(0deg, 0deg);
+}
+
+.aviso h1{
+    transition: 0.5s;
+    
+}
+
+.relogio{
+    display: block;
+    font-family: 'Metal Mania';
+    position: absolute;
+    right: 5px;
+    z-index: 100;
+    color: white;
+    font-size: 40px;
+    transform: scale3d(1, 1, 1) rotateX(0deg) rotateY(0deg) 
+    rotateZ(0deg) translate3d(-64px, 41px, 70px) skew(0deg, 0deg);
+}
+
+.rootbar{
+    transform-style: preserve-3d;
+    display: flex;
+    width: 100%;
+    height: 20%;
+    position: absolute;
+    bottom: 0;
+    justify-content: space-around;
+    align-items: center;
+    pointer-events: all;
+}
+
+
+
+
+
+.parede2 .botoes{
+    position: unset;
+    margin-right: 140px;
+    margin-top: 220px;
+    height: fit-content;
+    z-index: 40;
+}
+
+.parede3 .botoes{
+    position: unset;
+    margin-left: 62px;
+    margin-top: 220px;
+    height: fit-content;
+    z-index: 40;
+}
+
+.cameras{
+    font-size: 40px;
+    cursor: pointer;
+}
+
+
+

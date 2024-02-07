@@ -1,0 +1,230 @@
+.quarto{
+    display: flex;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    transform-style: preserve-3d;
+    transform: scale3d(1, 1, 1) rotateX(0deg) rotateY(0deg) 
+    rotateZ(0deg) translate3d(0px, 0px, 420px) skew(0deg, 0deg);
+    z-index: 1;
+    transition: 0.3s;
+}
+
+.chao{
+    transform-style: preserve-3d;
+    background-color: rgb(114, 55, 13);
+    background-image: url(../img/chao.jpg);
+    background-repeat: repeat;
+    height: 100%;
+    width: 100%;
+    background-size: contain;
+    transform-style: preserve-3d;
+    position: absolute;
+    bottom: -80px;
+    transform: scale3d(1, 1, 1) rotateX(91deg) rotateY(0deg) 
+    rotateZ(0deg) translate3d(0px, -84px, -71px) skew(0deg, 0deg);
+}
+
+.teto{
+    transform-style: preserve-3d;
+    z-index: 2;
+    background-color: rgb(114, 55, 13);
+    background-image: url(https://th.bing.com/th/id/R.cb7843a9cc590f13cc6bc65f77971240?rik=hl9fu6CnqyKGLw&pid=ImgRaw&r=0);
+    background-repeat: repeat;
+    height: 100%;
+    width: 100%;
+    background-size: contain;
+    transform-style: preserve-3d;
+    position: absolute;
+    bottom: -80px;
+    transform: scale3d(1, 1, 1) rotateX(91deg) rotateY(0deg) 
+    rotateZ(0deg) translate3d(0px, -84px, 368px) skew(0deg, 0deg);
+    position: absolute;
+}
+
+.paredeFrontal{
+    border: 1px solid black;
+    background-image: url(https://th.bing.com/th/id/OIP.nd-tFyFBiCPSbOmQo-S7_QHaHa?rs=1&pid=ImgDetMain);
+    background-size: contain;
+    display: flex;
+    justify-content: center;
+    align-items:end;
+    width: 100%;
+    height: 76%;
+    position: absolute;
+    left: 50%;
+    top: 0;
+    transform: scale3d(1, 1, 1) rotateX(0deg) rotateY(0deg) 
+    rotateZ(0deg) translate3d(-50%, 0px, -371px) skew(0deg, 0deg);
+    background-color: rgb(92, 172, 13);
+    transition: 1s  ;
+    
+}
+
+.paredeEsquerda{
+    border: 1px solid black;
+    display: flex;
+    justify-content: right;
+    width: 60%;
+    height: 76%;
+    position: absolute;
+    left: -54.5%;
+    top: 6%;
+    background-image: url(https://th.bing.com/th/id/OIP.nd-tFyFBiCPSbOmQo-S7_QHaHa?rs=1&pid=ImgDetMain);
+    background-size: contain;
+    background-color: rgb(84, 155, 14);
+    transition: 1s  ;
+    transform: scale3d(1, 1, 1) rotateX(0deg) rotateY(90deg) rotateZ(0deg)
+    translate3d(127px, -32px, 256px) skew(0deg, 0deg);
+}
+
+.paredeDireita{
+    border: 1px solid black;
+    display: flex;
+    justify-content: left;
+    width: 60%;
+    height: 76%;
+    position: absolute;
+    right: -54.5%;
+    top: 6%;
+    transform: scale3d(1, 1, 1) rotateX(0deg) rotateY(-90deg) rotateZ(0deg)
+    translate3d(-70px, -34px, 266px) skew(0deg, 0deg);
+    background-image: url(https://th.bing.com/th/id/OIP.nd-tFyFBiCPSbOmQo-S7_QHaHa?rs=1&pid=ImgDetMain);
+    background-size: contain;
+    background-color: rgb(84, 155, 14);
+    transition: 1s  ;
+    
+}
+
+.entrada{
+    z-index: 2;
+    display: flex;
+    position: absolute;
+    flex-direction: column;
+    justify-content: center;
+    margin-bottom: 1px;
+    height: 60%;
+    width: 20%;
+    background-color: rgb(27, 49, 6);
+    box-shadow: inset 0px 0px 15px 15px rgba(0,0,0,0.5);
+    background-image: url();
+    background-size:cover;
+    background-repeat: no-repeat;
+    background-position-y: bottom;
+    background-image: url(../img/porta.png); 
+    overflow: hidden;
+}
+
+.dutoEsquerdo{
+    width: 100px;
+    height: 100px;
+    background-size:contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    margin-right: -5px;
+    margin-top: 350px;
+    position: absolute;
+    right: 124px;
+    transform: scaleX(-1);
+    background-color: #000000;
+    overflow: hidden;
+}
+
+.dutoDireito{
+    display: block;
+    width: 100px;
+    height: 100px;
+    background-image: url();
+    background-size:contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    margin-right: -50px;
+    margin-top: 350px;
+    position: absolute;
+    right: 530px;
+    background-color: #000000;
+    overflow: hidden;
+}
+
+.animDE, .animDD{
+    display: none;
+    width: 100%;
+    height: 100%; 
+}
+
+.porta{
+    width: 100%;
+    height: 100%;
+    background-image: url(../img/portaDeMetal.png);
+    background-size: cover;
+    z-index: 10;
+    position: absolute;
+    top: -270px;
+    transition: 0.5s;
+}
+
+.animC{
+    background-image: url(../img/freddy.png);
+    background-size: cover;
+    min-height: 397px;
+    max-width: 192px;
+    background-repeat: no-repeat;
+    transform: scale(0.5) translateX(100px) translateY(0px);
+    display: block;
+    margin-bottom: -40px;
+    margin-left: -20%;
+    z-index: 8;
+}
+
+.botoes{
+    z-index: 40;
+    display: flex;
+    flex-direction: column;
+    background-color: black;
+    padding: 0px;
+    width: 50px;
+    position: absolute;
+}
+
+.paredeFrontal .botoes{
+    top: 50%;
+    right: 32%;
+}
+
+.paredeEsquerda .botoes{
+    top: 50%;
+    right: 24%;
+}
+
+.paredeDireita .botoes{
+    top: 50%;
+    right: 82%;
+}
+
+.btnLuz{
+    background-color: green;
+    width: 40px;
+    height: 40px;
+    margin: 5px;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 25px;
+}
+.btnLuz:hover{
+    background-color: rgb(0, 173, 0);
+}
+.btnPorta{
+    background-color: red;
+    width: 40px;
+    margin: 5px;
+    height: 40px;
+    cursor: pointer;
+    justify-content: center;
+    align-items: center;
+    font-size: 25px;
+}
+.btnPorta:hover{
+    background-color: rgb(247, 46, 46);
+}
