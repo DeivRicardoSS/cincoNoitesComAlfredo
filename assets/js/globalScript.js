@@ -17,14 +17,19 @@ const state = {
         porta: document.querySelector(".paredeFrontal .porta"),
         btnFecharPorta: document.querySelector(".paredeFrontal .botoes .btnPorta"),
         btnLuzPorta: document.querySelector(".paredeFrontal .botoes .btnLuz"),
+        duto2: document.querySelector(".paredeDireita .porta"),
         btnFecharDutoD: document.querySelector(".paredeDireita .botoes .btnPorta"),
         btnLuzDutoD: document.querySelector(".paredeDireita .botoes .btnLuz"),
+        duto1: document.querySelector(".paredeEsquerda .porta"),
         btnFecharDutoE: document.querySelector(".paredeEsquerda .botoes .btnPorta"),
         btnLuzDutoE: document.querySelector(".paredeEsquerda .botoes .btnLuz"),
     },
     values:{
         noite: 1,
-        bateria: 100
+        bateria: 100,
+        portaFrontal: false,
+        dutoDireito: false,
+        dutoEsquerdo: false
     },
     config:{
         volume: 50,
@@ -42,9 +47,17 @@ const state = {
                 clearInterval(intervalo);
             }, 3000)
         },
-        fecharPorta(){
-            state.view.porta.style.top = 0;
-            sounds.somPortaFechando.play();
+        fecharPorta(entrada){
+            if(state.values.portaFrontal == false){
+                entrada.style.top = 0;
+                sounds.somPortaAbrindo.play();
+                state.values.portaFrontal = true;
+            }else{
+                entrada.style.top = '-270px';
+                sounds.somPortaAbrindo.play();
+                state.values.portaFrontal = false;
+            }
+            
         }
     }
 }
@@ -70,8 +83,9 @@ const chica = {
 }
 
 function start(){
-    state.view.btnFecharPorta.addEventListener('click', ()=>{state.functions.fecharPorta()});
+    state.view.btnFecharPorta.addEventListener('click', ()=>{state.functions.fecharPorta(state.view.porta)});
+    state.view.btnFecharDutoD.addEventListener('click', ()=>{state.functions.fecharPorta(state.view.duto2)});
+    state.view.btnFecharDutoE.addEventListener('click', ()=>{state.functions.fecharPorta(state.view.duto1)});
     sounds.somAmbiente.play();
     sounds.phoneguy(state.values.noite).play();
-    sounds.somPortaFechando.play();
 }
